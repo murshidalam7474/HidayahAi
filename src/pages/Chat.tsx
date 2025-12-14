@@ -56,7 +56,6 @@ const Chat = () => {
     setInput("");
     setIsLoading(true);
 
-    console.log("API Key:", import.meta.env.VITE_API_KEY); // Log the API key to check if it's being called
 
     try {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
