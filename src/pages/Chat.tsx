@@ -61,7 +61,7 @@ const Chat = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer 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",
+          "Authorization": `Bearer ${process.env.REACT_APP_API_KEY}`,
           "HTTP-Referer": window.location.origin,
           "X-Title": "HidayahAI",
         },
