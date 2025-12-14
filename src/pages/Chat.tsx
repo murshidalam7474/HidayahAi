@@ -56,12 +56,14 @@ const Chat = () => {
     setInput("");
     setIsLoading(true);
 
+    console.log("API Key:", import.meta.env.VITE_API_KEY); // Log the API key to check if it's being called
+
     try {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.REACT_APP_API_KEY}`,
+          "Authorization": `Bearer ${import.meta.env.VITE_API_KEY}`,
           "HTTP-Referer": window.location.origin,
           "X-Title": "HidayahAI",
         },
